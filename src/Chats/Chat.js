@@ -1,7 +1,6 @@
 import React from 'react'
-
 function Chat(props){
-    let time = '<script>'+props.time+'</script>'
+    let time = '<b>'+props.time+'</b>'
     return (
         <div className={`container ${props.origin === 'from' ? 'left' : 'right'}`}>
             <div className={props.origin === 'from' ? 'left' : 'right'}>
