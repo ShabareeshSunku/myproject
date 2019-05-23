@@ -1,9 +1,16 @@
 import React from 'react';
 
 function PlaylistItem(props) {
-    const { video = {}, index } = props
+    const { video = {}, index, isSelected = false } = props
+    // props = {
+    //     video : {},
+    //     index:1,
+    //     isSelected : true
+    // }
+    // //const video = props.video
+    // const {video:newVideo={}} = props
     return (
-        <div className="video-item" onClick={()=>{
+        <div className={`video-item ${isSelected ? 'video-item-selected' : ''}`} onClick={() => {
             props.playVideo(index)
         }}>
             <div className="thumbnail-container">

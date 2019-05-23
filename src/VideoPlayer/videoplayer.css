@@ -30,7 +30,7 @@ body{
     cursor: pointer;
 }
 .video-item-selected {
-    background-color: #111;
+    background-color: #222;
 }
 .thumbnail-container {
     width: 40%;
