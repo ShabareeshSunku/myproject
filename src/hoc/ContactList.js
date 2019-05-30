@@ -1,4 +1,6 @@
 import React from 'react'
+import FavsButton from './FavsButton'
+
 export default function ContactList(props) {
     const users = props.users || []
     return (
@@ -13,6 +15,7 @@ export default function ContactList(props) {
                                 <p className="email">{user.email}</p>
                                 <p className="address">{user.address}</p>
                             </div>
+                            <FavsButton user={user} />
                             <button>Contact</button>
                         </div>
                     )

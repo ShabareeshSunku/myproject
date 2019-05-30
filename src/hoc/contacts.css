@@ -46,6 +46,7 @@
     border-radius: 6px;
     overflow: hidden;
     padding-top: 16px;
+    position: relative;
   }
   .name,.address {
       text-transform: capitalize;
@@ -93,4 +94,13 @@
   }
   .text-container {
       padding : 12px
+  }
+
+  .favButton {
+    position: absolute;
+    top : 20px;
+    right : 20px;
+    font-size: 20px;
+    color : tomato;
+    cursor: pointer;
   }

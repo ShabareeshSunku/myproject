@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import ContactList from './ContactList'
 import withLoader from './withLoader'
+import FavoritesManager from './FavoritesManager'
 import './contacts.css'
 
-const ContactListWithLoader = withLoader(ContactList,'users')
+const ContactListWithLoader = withLoader(ContactList, 'users')
+
 export default class Contacts extends Component {
     constructor(props) {
         super(props)
@@ -12,7 +14,7 @@ export default class Contacts extends Component {
         }
     }
     componentDidMount() {
-        fetch('https://api.randomuser.me/?results=200')
+        fetch('https://api.randomuser.me/?results=200&seed=abc')
             .then((res) => res.json())
             .then((data) => {
                 const results = data.results || []
@@ -42,6 +44,10 @@ export default class Contacts extends Component {
 
     render() {
         const users = this.state.users || []
-        return <ContactListWithLoader users={users} />
+        return (
+            <FavoritesManager>
+                <ContactListWithLoader users={users} />
+            </FavoritesManager>
+        )
     }
 }
