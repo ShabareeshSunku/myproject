@@ -15,5 +15,13 @@ store.subscribe(function () {
     console.log(store.getState())
 })
 
-store.dispatch({ type: 'WITHDRAW', value: 200 })
-store.dispatch({type : 'DEPOSIT', value:500})
+store.dispatch(withdrawAction(200))
+store.dispatch(depositAction(500))
+
+function withdrawAction(value){
+    return { type: 'WITHDRAW', value: value }
+}
+
+function depositAction(value){
+    return { type: 'DEPOSIT', value: value }
+}
