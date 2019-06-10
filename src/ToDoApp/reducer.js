@@ -31,4 +31,17 @@ function ToDoReducer(state = [], action) {
     }
 }
 
-export default ToDoReducer
+
+function FilterReducer(state = 'ALL', action) {
+    if (action.type === action_constants.UPDATE_FILTER) {
+        console.log(action.filter)
+        return action.filter
+    } else {
+        return state
+    }
+}
+
+export {
+    ToDoReducer,
+    FilterReducer
+}
