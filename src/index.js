@@ -8,10 +8,11 @@ import ReactDOM from 'react-dom';
 //import { RandomComponent, ColoredComponent } from './hoc/Sample'
 //import Contacts from './hoc/index'
 //import ContextDemo from './context/index'
-import ToDoApp from './ToDoApp'
+//import ToDoApp from './ToDoApp'
+import Contacts from './ReduxContactsApp'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<ToDoApp />, document.getElementById('root'));
+ReactDOM.render(<Contacts />, document.getElementById('root'));
 //ReactDOM.render(<LifeCycleOld />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
