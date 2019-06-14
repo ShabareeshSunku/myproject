@@ -1,6 +1,7 @@
 
 const action_types = {
-    FETCH_CONTACTS: 'FETCH_CONTACTS'
+    FETCH_CONTACTS: 'FETCH_CONTACTS',
+    FETCH_CONTACTS_SUCEEDED : 'FETCH_CONTACTS_SUCEEDED'
 }
 //example having asyncflow in the action creator itself
 // function fetchContacts(dispatch) {
@@ -57,7 +58,7 @@ function fetchContacts() {
         type: action_types.FETCH_CONTACTS,
         async: true,
         transform: parseData,
-        reqUrl: 'https://api.randomuser.me/?results=200&seed=abc'
+        reqUrl: 'https://api.randomuser.me/?results=100&seed=abc'
     }
 }
 export {

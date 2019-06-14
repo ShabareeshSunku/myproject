@@ -11,15 +11,22 @@ class ContactList extends Component {
 
     render() {
         const contacts = this.props.contacts || []
+        const loading = this.props.loading || false
         return (
             <FavoritesManager>
                 <div className="container">
                     {
-                        contacts.length > 0 ? contacts.map((contact, index) => {
+                        loading === false ? contacts.map((contact, index) => {
                             return (
                                 <ContactItem contact={contact} key={contact.id} />
                             )
-                        }) : null
+                        }) : (
+                                <div
+                                    className="container"
+                                    style={{ textAlign: 'center', marginTop: '50px' }}>
+                                    <div className="loader" />
+                                </div>
+                            )
                     }
                 </div>
             </FavoritesManager>
@@ -33,7 +40,8 @@ const mapDispatchToProps = (dispatch) => {
 }
 const mapStateToProps = (state) => {
     return {
-        contacts: state
+        contacts: state.contacts,
+        loading: state.loading
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(ContactList)
