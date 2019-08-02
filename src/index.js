@@ -7,15 +7,16 @@ import ReactDOM from 'react-dom';
 //import UnControlledForm from './Forms/UnControlledForm'
 //import { RandomComponent, ColoredComponent } from './hoc/Sample'
 //import Contacts from './hoc/index'
-//import ContextDemo from './context/index'
+import ContextDemo from './context/index'
 //import ToDoApp from './ToDoApp'
 //import Contacts from './ReduxContactsApp'
 //import Counter from './Hooks/Counter'
-import Clock from './Hooks/Clock'
+//import Clock from './Hooks/Clock'
+//import UserManager from './UserManager'
 import * as serviceWorker from './serviceWorker';
 //import sagaSample from './ReduxSagaDemo'
 //sagaSample()
-ReactDOM.render(<Clock />, document.getElementById('root'));
+ReactDOM.render(<ContextDemo />, document.getElementById('root'));
 //ReactDOM.render(<LifeCycleOld />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

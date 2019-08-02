@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 
 export default function Clock() {
     const [time, updateTime] = useState(new Date().toString())
-    setInterval(function(){
-        updateTime(new Date().toString())
-    },1000)
-    useEffect(()=>{
-        document.title = time
-    })
+    useEffect(() => {
+        let timer = setInterval(function () {
+            updateTime(new Date())
+        }, 1000)
+        return () => {
+            clearInterval(timer)
+        }
+    }, [])
     return (
-        <h2>{time}</h2>
+        <h2>{time.toString()}</h2>
     )
 }

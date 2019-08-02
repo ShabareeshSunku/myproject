@@ -1,11 +1,7 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Counter() {
     const [count, updateCount] = useState(0)
-    //const [time, updateTime] = useState(new Date())
-    useEffect(()=>{
-        
-    })
     return (
         <div>
             <h1>{count}</h1>
@@ -14,3 +10,10 @@ export default function Counter() {
         </div>
     )
 }
+
+this.state = {
+   loading : true 
+}
+this.setState({
+    loading : false
+})
